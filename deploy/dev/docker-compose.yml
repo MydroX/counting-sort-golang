@@ -1,0 +1,6 @@
+version: "3.3"
+services: 
+  go-visual-sort:
+    build:
+      context: ../
+      dockerfile: deploy/dev/Dockerfile

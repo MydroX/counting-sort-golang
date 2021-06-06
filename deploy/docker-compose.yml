@@ -1,0 +1,19 @@
+version: "3.3"
+services: 
+  go-visual-sort:
+    build:
+      args: 
+        WORK_DIR: /go/src/github.com/MydroX/go-visual-sort
+    container_name: go-visual-sort
+    ports:
+      - 8080:8080
+      - 80:3000
+    volumes: 
+      - ../.:/go/src/github.com/MydroX/go-visual-sort
+    networks: 
+      - go-visual-sort
+
+networks:
+  go-visual-sort:
+    external: true
+  
